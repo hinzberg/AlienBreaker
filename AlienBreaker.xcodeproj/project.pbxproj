@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3FCCD85C2E66108E00EE5D44 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3FCCD85B2E66108E00EE5D44 /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		3FE9F6C42E654CBA00F524EB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3FCCD85B2E66108E00EE5D44 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3FE9F6B62E654CB500F524EB /* AlienBreaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlienBreaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE9F6C32E654CBA00F524EB /* AlienBreakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlienBreakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE9F6CD2E654CBA00F524EB /* AlienBreakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlienBreakerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +80,7 @@
 		3FE9F6AD2E654CB500F524EB = {
 			isa = PBXGroup;
 			children = (
+				3FCCD85B2E66108E00EE5D44 /* README.md */,
 				3FE9F6B82E654CB500F524EB /* AlienBreaker */,
 				3FE9F6C62E654CBA00F524EB /* AlienBreakerTests */,
 				3FE9F6D02E654CBA00F524EB /* AlienBreakerUITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FCCD85C2E66108E00EE5D44 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
