@@ -9,10 +9,14 @@ import SwiftUI
 
 @main
 struct AlienBreakerApp: App {
+    
+    var scoreEnvironment = ScoreEnviroment()
+    
     var body: some Scene {
         WindowGroup {
             //ContentView()
             ScoreSceneTestView()
+                .environment(scoreEnvironment)
         }
     }
 }

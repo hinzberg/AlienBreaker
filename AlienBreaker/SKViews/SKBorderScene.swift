@@ -25,7 +25,7 @@ class SKBorderScene: SKScene {
         }
         
         self.backgroundColor = backColor
-        self.SetBorder(borderThickness: self.borderThickness , borderColor: self.borderColor)
+       // self.SetBorder(borderThickness: self.borderThickness , borderColor: self.borderColor)
     }
     
     func SetBorder( borderThickness : CGFloat, borderColor : SKColor )
