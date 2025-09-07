@@ -17,22 +17,26 @@ struct ScoreSceneTestView: View {
             }.frame(height: 40)
         }
         
-        Button("Increase Score", action:
-                { self.scoreEnv.currentGameScore = self.scoreEnv.currentGameScore + 100 }  )
+        VStack(spacing: 15) {
+            Button("Increase Score") {
+                scoreEnv.currentGameScore += 100
+            }.redButtonStyle()
+            
+            Button("Increase Level") {
+                scoreEnv.currentLevelNumber += 1
+            }.redButtonStyle()
+            
+            Button("Increase Lives") {
+                scoreEnv.currentLives += 1
+            }.redButtonStyle()
+            
+            Button("Decrease Lives") {
+                scoreEnv.currentLives -= 1
+            }.redButtonStyle() 
+        }
         .buttonStyle(.bordered)
-        
-        Button("Increase Level", action:
-                { self.scoreEnv.currentLevelNumber = self.scoreEnv.currentLevelNumber + 1 }  )
-        .buttonStyle(.bordered)
-        
-        Button("Increase Lives", action:
-                { self.scoreEnv.currentLives = self.scoreEnv.currentLives + 1 }  )
-        .buttonStyle(.bordered)
-        
-        Button("Decrease Lives", action:
-                { self.scoreEnv.currentLives = self.scoreEnv.currentLives - 1 }  )
-        .buttonStyle(.bordered)
-        
+        .frame(maxWidth: .infinity) // Make all buttons expand horizontally
+        .padding(20)
     }
     
     func GetBorderScene( size : CGSize) -> SKBorderScene
@@ -49,7 +53,6 @@ struct ScoreSceneTestView: View {
         scene.scoreEnv = self.scoreEnv
         return scene;
     }
-    
 }
 
 #Preview {

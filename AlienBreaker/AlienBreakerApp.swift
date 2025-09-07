@@ -11,12 +11,15 @@ import SwiftUI
 struct AlienBreakerApp: App {
     
     var scoreEnvironment = ScoreEnviroment()
+    var accelerometerEnviroment = AccelerometerEnviroment()
     
     var body: some Scene {
         WindowGroup {
             //ContentView()
-            ScoreSceneTestView()
+            //ScoreSceneTestView()
+            AccelerometerSceneTestView()
                 .environment(scoreEnvironment)
+                .environment(accelerometerEnviroment)
         }
     }
 }
