@@ -11,7 +11,6 @@ class SKBorderScene: SKScene {
     public var showLeft : Bool = true
     public var showRight : Bool = true
     public var borderColor : SKColor = .red
-    public var backColor : SKColor = .black
     public var borderThickness : CGFloat =  4
     
     var externalSize:CGSize?
@@ -23,9 +22,11 @@ class SKBorderScene: SKScene {
         } else {
             self.size = CGSize(width: 400, height: 400)
         }
-        
+    }
+    
+    func setBackgroundColor(backColor : SKColor)
+    {
         self.backgroundColor = backColor
-       // self.SetBorder(borderThickness: self.borderThickness , borderColor: self.borderColor)
     }
     
     func SetBorder( borderThickness : CGFloat, borderColor : SKColor )

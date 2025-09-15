@@ -1,5 +1,4 @@
 //  SKAccelerometerScene.swift
-//  AlienBreaker
 //  Created by Holger Hinzberg on 07.09.25.
 
 import Foundation
@@ -18,10 +17,11 @@ class SKAccelerometerScene : SKBorderScene , ObservableObject {
     {
         super.didMove(to: view)
         super.SetBorder(borderThickness: self.baseBorderThickness, borderColor: self.baseBorderColor)
+        super.setBackgroundColor(backColor: .black)
         
-        let controlsize = CGSize(width: self.size.width - 10 , height: 20)
-        let centerpoint = CGPoint(x: self.frame.size.width / 2 , y: self.frame.size.height / 2)
-        self.accelerometerControler = SKAccelerometerSceneController(scene: self, size: controlsize, centerPoint: centerpoint)
+        let controlsize = super.externalSize
+        let centerpoint = CGPoint(x: super.frame.size.width / 2 , y: super.frame.size.height / 2)
+        self.accelerometerControler = SKAccelerometerSceneController(scene: self, size: controlsize!, centerPoint: centerpoint)
     }
 
     // Autoupdate of the SpriteKit Scene
@@ -31,7 +31,7 @@ class SKAccelerometerScene : SKBorderScene , ObservableObject {
         let x = self.accelerometerEnv?.x
         if let xValue = x
         {
-            self.accelerometerControler?.setValue(value: xValue)
+            self.accelerometerControler?.updateValue(value: xValue)
         }
     }
 }

@@ -1,9 +1,5 @@
-//
 //  AccelerometerSceneTestView.swift
-//  AlienBreaker
-//
 //  Created by Holger Hinzberg on 07.09.25.
-//
 
 import SwiftUI
 import SpriteKit
@@ -17,7 +13,7 @@ struct AccelerometerSceneTestView: View {
         VStack (spacing: 0) {
             GeometryReader { geo in
                 SpriteView(scene: GetAccelerometerScene(size: geo.size))
-            }.frame(height: 50)
+            }.frame(height: 40)
         }
     }
     
